@@ -1,2 +1,2 @@
 # cartographierV2
-Une évolution du projet Cartographier.py de Yanis 
+Une évolution du projet Cartographier.py de @yrigaudeau
