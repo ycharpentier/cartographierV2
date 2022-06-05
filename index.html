@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+<title>Projet Niger</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Actions à Dankassari</h1>
+<p>Importer les fichiers de populations et d'activités (format xls, xlsx, spreadsheet....)</p>
+<form action="index.php" method="post" enctype="multipart/form-data">
+ <p>Fichier population : <input type="file" name="fichier_pop" id="fichier_pop" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" /></p>
+ <p>Fichier activités : <input type="file" name="fichier_act" id="fichier_act" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" /></p>
+   <div>
+    <input type="radio" id="1" name="selectmap" value="1">
+    <label for="contactChoice1">Fond de carte #1</label>
+
+    <input type="radio" id="2" name="selectmap" value="2">
+    <label for="contactChoice2">Fond de carte #2</label>
+
+    <input type="radio" id="3" name="selectmap" value="3">
+    <label for="contactChoice3">Fond de carte #3</label>
+  </div>
+ <p><input type="submit" value="VALIDER"></p>
+</form>
+<h4>Documentation pour faire fonctionner Cartographier.py en local :</h4>
+<a href="tutos.html">Page des documentations</a>
+
+</body>
+</html>
