@@ -16,11 +16,10 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 <?php 
 
 //TESTER SI LES FICHIERS SONT CORRECTS
-//echo $_FILES['fichier_act']['name'];
+echo $_FILES['fichier_act']['name'];
 
 move_uploaded_file($_FILES['fichier_act']['tmp_name'], 'Activites.xlsx');
 move_uploaded_file($_FILES['fichier_pop']['tmp_name'], 'Population.xlsx');
-
 
 $s=$_POST["selectmap"];
 if ($s==1 || $s==2 || $s==3){
@@ -28,7 +27,8 @@ if ($s==1 || $s==2 || $s==3){
 	shell_exec ("python3 Cartographier.py Activites.xlsx Population.xlsx $s CARTE");
 	shell_exec ('etape1_generation.py');
 
-	echo "<a href='select_city.php'>Générer un fichier archivant les activités par villes</a><br>";
+
+	echo "<a href='select_city.php'>Générer un fichier archivant les activités par village</a><br>";
 	echo "<a href='CARTE.html' download='CARTE.html'>Télécharger la carte</a><br>";
 	echo "<a href='CARTE.html' target='_blank'>Ouvrir la carte sans télécharement</a><br><br>";
 	echo "<a href='index.html'>Générer une autre carte</a>";
