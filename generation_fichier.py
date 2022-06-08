@@ -9,7 +9,8 @@ rows = feuille_1.nrows
 cols = feuille_1.ncols
 
 f=open("Archive_activite.txt","w+")
-villeid=int(sys.argv[0])
+print(sys.argv[1])
+villeid=int(sys.argv[1])
 ville = feuille_1.cell_value(villeid,1)
 f.write(ville)
 

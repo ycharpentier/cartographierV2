@@ -143,6 +143,8 @@ function display(id) {
 
 function disdow(id) { //TOUT NOUVEAU ! 
 	id = id.slice(0, -1);   //on enleve la derniere lettre
+	//alert("id du village: " + id);
+
 	var archive=[]
 	for(var i in tableauNomVillage)  //check où l'ID de la ville apparaît dans la liste des activités
 	{
@@ -152,6 +154,7 @@ function disdow(id) { //TOUT NOUVEAU !
 			archive.push(i)
 		}
 	}
+	
 	for(var j in tableauPopVillage) //POSSIBILITE DE FAIRE PLUS COMPACT ... A VOIR.
 	{
 			var valeur=tableauPopVillage[j]
@@ -161,6 +164,8 @@ function disdow(id) { //TOUT NOUVEAU !
 				archive.push(population)
 			}
 	}
+	
+	
 	for(var k in tableauCommentaires)
 	{
 		if(k==id)
@@ -172,6 +177,8 @@ function disdow(id) { //TOUT NOUVEAU !
 			
 		}
 	}
+	
+
 	var archive = archive.join("\n")
 	alert(archive)
 }

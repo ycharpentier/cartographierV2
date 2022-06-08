@@ -68,14 +68,13 @@ def CreerPanneauxInformation():
         rectFond = CreerRectangle(str(v) + "rect", x + 10, y - espacement, max(Width*facteurEspacement + espacement, 245) - 10, 50+espacement*len(villages[v].categories)+espacement, "rectFond", 'premierPlan(this.parentNode)')
         f.write(rectFond)
         
-        #ce qui est clickable pour fermer le panneau d'information + son texte  ++ affichage activites 
+        #ce qui est clickable pour fermer le panneau d'information + son texte  ++ téléchargement
         rectClick = CreerRectangle(str(v) + "c", max(x + (Width*facteurEspacement), x+225), y - 15, 16, 16, "xRect", "display(this.id)") 
         f.write(rectClick)
             
         textClick = CreerTexte(str(v) + "X", max(x +11+ Width*facteurEspacement-10, x+225), y, "X", "xTexte", "display(this.id)")
         f.write(textClick)
         
-  
         download = CreerRectangle(str(v) + "D", x+140, y+9, 16, 16, "xDow","disdow(id)") 
         f.write(download)
         
