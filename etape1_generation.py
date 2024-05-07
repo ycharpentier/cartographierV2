@@ -1,5 +1,4 @@
 import xlrd
-print("odfjgsdmlgjqsmlfkjqsrgmojsdhvpoqivbpqciru bpjrhsljkfsRFHZRLKJGSRGJ")
 document = xlrd.open_workbook("Activites.xlsx")
 feuille_1 = document.sheet_by_index(0)
 rows = feuille_1.nrows
